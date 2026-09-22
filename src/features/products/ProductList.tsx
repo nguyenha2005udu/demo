@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { addItem } from "../cart/cartSlice";
 import { fetchProducts } from "./productsSlice";
+import { FavoriteButton } from '../favorites/FavoriteButton'
 
 import "./ProductList.css";
 
@@ -109,6 +110,7 @@ function ProductList() {
                   {getQuantity(product.id) > 0 &&
                     ` (${getQuantity(product.id)})`}
                 </button>
+                <FavoriteButton product={product} />
               </div>
             </article>
           ))}

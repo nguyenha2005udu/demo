@@ -1,6 +1,7 @@
 
 import ProductList from "./features/products/ProductList";
 import Cart from "./features/cart/Cart";
+import { Favorites } from './features/favorites/Favorites'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       </header>
 
       <ProductList />
+      <Favorites />
 
       <Cart />
 
